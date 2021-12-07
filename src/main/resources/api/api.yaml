@@ -1,0 +1,12 @@
+openapi: 3.0.0
+info:
+  description: API specification
+  version: 1.0.0
+  title: Microservice
+servers:
+  - url: 'http://localhost:8060//'
+    description: Local
+
+paths:
+  /emails:
+    $ref: "emails.yaml#/emails"

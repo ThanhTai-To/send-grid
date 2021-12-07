@@ -1,0 +1,6 @@
+emails:
+  post:
+    tags:
+      - members
+    summary: Register Member
+    operationId: createMember
