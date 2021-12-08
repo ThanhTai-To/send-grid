@@ -55,7 +55,7 @@ public class NotificationServiceImpl implements NotificationService {
 
   private void sendEmail(final Notification notification) throws IOException {
 
-    final String subject = "Subject activate account";
+    final String subject = "Subject test integrate sendgrid";
 
     if (CollectionUtils.isNotEmpty(notification.getToEmails())) {
       final Mail mail = createMail(notification, subject);
@@ -75,6 +75,9 @@ public class NotificationServiceImpl implements NotificationService {
   }
 
   private Mail createMail(final Notification notification, final String subject) {
+    //TODO: validate email unique in bbc,cc,to
+    // Email template
+    // Email header, footer
 
     final Mail mail = new Mail();
 

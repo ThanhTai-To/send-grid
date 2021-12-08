@@ -3,7 +3,7 @@ server:
 app:
   sendgrid:
     api-key:
-    from-email: 1859042@itec.hcmus.edu.vn
+    from-email: hiclinic2021@gmail.com
     from-name: PTC Admin
     tracking-setting:
       substitution-tag: '%open-track%'
