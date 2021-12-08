@@ -1,0 +1,13 @@
+server:
+  port: 8060
+app:
+  sendgrid:
+    api-key:
+    from-email: 1859042@itec.hcmus.edu.vn
+    from-name: PTC Admin
+    tracking-setting:
+      substitution-tag: '%open-track%'
+mongock:
+  enabled: true
+  change-logs-scan-package:
+    - com.ptc.sendgrid.changlog

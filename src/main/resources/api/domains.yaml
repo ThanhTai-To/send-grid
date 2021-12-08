@@ -1,0 +1,39 @@
+components:
+  schemas:
+    Account:
+      title: Account
+      properties:
+        email:
+          type: string
+        name:
+          type: string
+    NotificationModel:
+      title: NotificationModel
+      properties:
+        id:
+          type: string
+        toEmails:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+        ccEmails:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+        bccEmails:
+          type: array
+          items:
+            $ref: '#/components/schemas/Account'
+        message:
+          type: string
+        type:
+          type: string
+          enum:
+            - EMAIL
+            - SMS
+    CreateNotificationRequest:
+      allOf:
+        - $ref: '#/components/schemas/NotificationModel'
+    CreateNotificationResponse:
+      allOf:
+        - $ref: '#/components/schemas/NotificationModel'

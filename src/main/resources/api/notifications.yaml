@@ -1,0 +1,18 @@
+notifications:
+  post:
+    tags:
+      - notifications
+    summary: Send notification
+    operationId: sendNotification
+    requestBody:
+      content:
+        application/json:
+          schema:
+            $ref: 'domains.yaml#/components/schemas/CreateNotificationRequest'
+    responses:
+      201:
+        description: Created
+        content:
+          application/json:
+            schema:
+              $ref: 'domains.yaml#/components/schemas/CreateNotificationResponse'
